@@ -24,6 +24,42 @@
   box-sizing: border-box;
 }
 
+/* ===== SVG ICON STYLES ===== */
+.social-icon img,
+.menu-toggle img,
+.breadcrumb-home {
+  transition: var(--transition);
+}
+
+.social-icon img {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(94%) saturate(1952%)
+    hue-rotate(345deg) brightness(95%) contrast(92%);
+}
+
+.social-icon:hover img {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(2142%)
+    hue-rotate(345deg) brightness(88%) contrast(101%);
+}
+
+.menu-toggle img {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(94%) saturate(1952%)
+    hue-rotate(345deg) brightness(95%) contrast(92%);
+}
+
+.breadcrumb-home {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(94%) saturate(1952%)
+    hue-rotate(345deg) brightness(95%) contrast(92%);
+}
+
+.features-list img,
+.services-list img,
+.contact-item img {
+  vertical-align: middle;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(94%) saturate(1952%)
+    hue-rotate(345deg) brightness(95%) contrast(92%);
+}
+
 html {
   font-size: 16px;
   height: 100%;
@@ -466,13 +502,14 @@ body.home-page {
   border: 3px solid #a71103;
 }
 
-.scroll-top i {
+.scroll-top img {
   display: flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
   height: 100%;
   width: 100%;
+  filter: brightness(0) invert(1);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1178,9 +1215,10 @@ body.home-page {
   box-shadow: 0 4px 15px rgba(183, 28, 28, 0.3);
 }
 
-.icon-wrapper i {
-  font-size: 2rem;
-  color: white;
+.icon-wrapper img {
+  width: 2rem;
+  height: 2rem;
+  filter: brightness(0) invert(1);
 }
 
 .icon-item h2 {
@@ -1442,8 +1480,10 @@ body.home-page {
     height: 80px;
   }
 
-  .icon-wrapper i {
-    font-size: 2rem;
+  .icon-wrapper img {
+    width: 2rem;
+    height: 2rem;
+    filter: brightness(0) invert(1);
   }
 
   .cta-left-content h1 {
