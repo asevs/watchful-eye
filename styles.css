@@ -276,7 +276,7 @@ body.home-page {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("images/pexels-andrea-piacquadio-3771087-scaled.jpg");
+  background-image: url("images/pexels-andrea-piacquadio-3771087-scaled.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2342,5 +2342,104 @@ body.home-page {
   .checklist-item i {
     margin-right: 12px;
     font-size: 14px;
+  }
+}
+
+/* ===== BREADCRUMB STYLES ===== */
+.breadcrumb-section {
+  background-color: var(--gray-light);
+  padding: 15px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-light);
+  font-family: var(--font-primary);
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb-item a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 400;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.breadcrumb-separator {
+  color: var(--text-light);
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.breadcrumb-separator::before {
+  content: "/";
+  margin: 0 5px;
+}
+
+.breadcrumb-home {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-right: 3px;
+}
+
+.breadcrumb-home:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-section {
+    padding: 12px 0;
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .breadcrumb-item {
+    gap: 6px;
+  }
+
+  .breadcrumb-separator::before {
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb-section {
+    padding: 10px 0;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .breadcrumb-item {
+    gap: 4px;
+  }
+
+  .breadcrumb-separator::before {
+    margin: 0 2px;
   }
 }
