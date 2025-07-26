@@ -9,6 +9,26 @@ RewriteCond %{REQUEST_URI} ^/$
 RewriteCond %{HTTP:Accept-Language} ^en [NC]
 RewriteRule ^(.*)$ /en/ [R=302,L]
 
+# URL mapping between Polish and English versions
+# Force override with lang parameter
+RewriteCond %{QUERY_STRING} lang=pl [NC]
+RewriteRule ^en/(.*)$ /$1? [R=302,L]
+
+RewriteCond %{QUERY_STRING} lang=en [NC]
+RewriteRule ^(.*)$ /en/$1? [R=302,L]
+
+# Polish to English mapping for direct access
+RewriteRule ^o-nas/?$ /en/about-us [R=301,L]
+RewriteRule ^oferta/?$ /en/services [R=301,L] 
+RewriteRule ^kontakt/?$ /en/contact [R=301,L]
+RewriteRule ^faq/?$ /en/faq [R=301,L]
+RewriteRule ^misja/?$ /en/mission [R=301,L]
+RewriteRule ^dlaczego-my/?$ /en/why-us [R=301,L]
+RewriteRule ^jak-dzialamy/?$ /en/how-we-work [R=301,L]
+RewriteRule ^audyt-bezposredni/?$ /en/direct-audit [R=301,L]
+RewriteRule ^metody-posrednie/?$ /en/indirect-methods [R=301,L]
+RewriteRule ^audyt-strony-www/?$ /en/website-audit [R=301,L]
+
 # Remove .html extension from URLs (Polish)
 # Redirect /page.html to /page
 RewriteCond %{THE_REQUEST} \s/([^.\s?]+)\.html[\s?] [NC]

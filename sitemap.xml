@@ -1,69 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://watchfuleye.pl/</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/o-nas</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/o-nas"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/misja</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/mission"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/misja"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/dlaczego-my</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/why-us"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/dlaczego-my"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/jak-dzialamy</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/how-we-work"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/jak-dzialamy"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/oferta</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/services"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/oferta"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/audyt-bezposredni</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/direct-audit"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/audyt-bezposredni"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/metody-posrednie</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/indirect-methods"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/metody-posrednie"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/audyt-strony-www</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/website-audit"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/audyt-strony-www"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/kontakt</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/contact"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/kontakt"/>
     </url>
     <url>
         <loc>https://watchfuleye.pl/faq</loc>
         <lastmod>2025-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/faq"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/faq"/>
+    </url>
+    
+    <!-- English pages -->
+    <url>
+        <loc>https://watchfuleye.pl/en/</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/about-us</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/about-us"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/o-nas"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/mission</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/mission"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/misja"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/why-us</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/why-us"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/dlaczego-my"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/how-we-work</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/how-we-work"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/jak-dzialamy"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/services</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/services"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/oferta"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/direct-audit</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/direct-audit"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/audyt-bezposredni"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/indirect-methods</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/indirect-methods"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/metody-posrednie"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/website-audit</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/website-audit"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/audyt-strony-www"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/contact</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/contact"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/kontakt"/>
+    </url>
+    <url>
+        <loc>https://watchfuleye.pl/en/faq</loc>
+        <lastmod>2025-07-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://watchfuleye.pl/en/faq"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://watchfuleye.pl/faq"/>
     </url>
 </urlset> 

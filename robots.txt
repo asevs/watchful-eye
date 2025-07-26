@@ -7,10 +7,18 @@ Sitemap: https://watchfuleye.pl/sitemap.xml
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
+# Allow all language versions
+Allow: /en/
+Allow: /*.html
+Allow: /images/
+Allow: /js/
+Allow: /styles.css
+
 # Block access to admin areas (if any in future)
 Disallow: /admin/
 Disallow: /private/
 Disallow: /*.pdf$
+Disallow: /*.md$
 
 # Allow important SEO files
 Allow: /sitemap.xml

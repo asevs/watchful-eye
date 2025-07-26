@@ -116,6 +116,76 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Language switching functionality
+  const languageSwitchers = document.querySelectorAll(".language-item a");
+  languageSwitchers.forEach(function(switcher) {
+    switcher.addEventListener("click", function(e) {
+      const href = this.getAttribute("href");
+      if (href && href !== "#") {
+        // Store language preference
+        const lang = this.getAttribute("hreflang") || "pl";
+        localStorage.setItem("preferredLanguage", lang);
+      }
+    });
+  });
+
+  // Language detection and auto-redirect on first visit
+  function detectAndRedirectLanguage() {
+    const storedLang = localStorage.getItem("preferredLanguage");
+    const browserLang = navigator.language || navigator.userLanguage;
+    const isEnglishPath = window.location.pathname.startsWith("/en/");
+    const isPolishPath = !isEnglishPath;
+
+    // Only redirect on homepage if no stored preference
+    if (window.location.pathname === "/" && !storedLang) {
+      if (browserLang.startsWith("en")) {
+        window.location.href = "/en/";
+        return;
+      }
+    }
+
+    // Apply stored preference if different from current page
+    if (storedLang === "en" && isPolishPath && window.location.pathname !== "/") {
+      const currentPath = window.location.pathname;
+      const urlMap = {
+        "/o-nas": "/en/about-us",
+        "/oferta": "/en/services", 
+        "/kontakt": "/en/contact",
+        "/faq": "/en/faq",
+        "/misja": "/en/mission",
+        "/dlaczego-my": "/en/why-us",
+        "/jak-dzialamy": "/en/how-we-work",
+        "/audyt-bezposredni": "/en/direct-audit",
+        "/metody-posrednie": "/en/indirect-methods",
+        "/audyt-strony-www": "/en/website-audit"
+      };
+      if (urlMap[currentPath]) {
+        window.location.href = urlMap[currentPath];
+      }
+    } else if (storedLang === "pl" && isEnglishPath) {
+      const currentPath = window.location.pathname.replace("/en", "");
+      const urlMap = {
+        "/about-us": "/o-nas",
+        "/services": "/oferta",
+        "/contact": "/kontakt", 
+        "/faq": "/faq",
+        "/mission": "/misja",
+        "/why-us": "/dlaczego-my",
+        "/how-we-work": "/jak-dzialamy",
+        "/direct-audit": "/audyt-bezposredni",
+        "/indirect-methods": "/metody-posrednie",
+        "/website-audit": "/audyt-strony-www",
+        "/": "/"
+      };
+      if (urlMap[currentPath]) {
+        window.location.href = urlMap[currentPath];
+      }
+    }
+  }
+
+  // Run language detection
+  detectAndRedirectLanguage();
+
   // Performance monitoring
   if ("performance" in window && "getEntriesByType" in performance) {
     window.addEventListener("load", function () {
