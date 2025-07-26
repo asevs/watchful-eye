@@ -61,31 +61,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Form validation and enhancement
-  const contactForm = document.querySelector(".contact-form form");
+  // Contact form handling with Formspree
+  const contactForm = document.querySelector(".contact-form-element");
+  const submitBtn = document.querySelector(".submit-btn");
+
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Basic validation
-      const formData = new FormData(this);
-      const name = formData.get("name");
-      const email = formData.get("email");
-      const message = formData.get("message");
-
-      if (!name || !email || !message) {
-        alert("Proszę wypełnić wszystkie pola");
-        return;
+      // Disable submit button and show loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "WYSYŁANIE...";
       }
 
-      if (!isValidEmail(email)) {
-        alert("Proszę podać prawidłowy adres email");
-        return;
-      }
+      // Get form data
+      const formData = new FormData(contactForm);
 
-      // Here you would normally send the form data to your server
-      alert("Dziękujemy za wiadomość! Skontaktujemy się z Państwem wkrótce.");
-      this.reset();
+      // Send to Formspree
+      fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Success
+            alert(
+              "Dziękujemy za wiadomość! Skontaktujemy się z Państwem wkrótce."
+            );
+            contactForm.reset();
+          } else {
+            // Error
+            alert(
+              "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie."
+            );
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert(
+            "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie."
+          );
+        })
+        .finally(() => {
+          // Re-enable submit button
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "WYŚLIJ WIADOMOŚĆ";
+          }
+        });
     });
   }
 

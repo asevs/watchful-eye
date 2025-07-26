@@ -1,8 +1,17 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap location
 Sitemap: https://watchfuleye.pl/sitemap.xml
 
-# Crawl-delay for better server performance
-Crawl-delay: 1 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to admin areas (if any in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+
+# Allow important SEO files
+Allow: /sitemap.xml
+Allow: /robots.txt 
