@@ -3,15 +3,33 @@
 # Enable URL rewriting
 RewriteEngine On
 
-# Remove .html extension from URLs
-# Redirect /page.html to /page
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1? [NC,L,R=301]
+# Language detection and redirects
+# Default to Polish if no language specified
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteRule ^(.*)$ /en/ [R=302,L]
 
-# Internally rewrite /page to /page.html
+# Remove .html extension from URLs (Polish)
+# Redirect /page.html to /page
+RewriteCond %{THE_REQUEST} \s/([^.\s?]+)\.html[\s?] [NC]
+RewriteCond %{REQUEST_URI} !^/en/
+RewriteRule ^ /%1? [R=301,L]
+
+# Remove .html extension from URLs (English)
+# Redirect /en/page.html to /en/page
+RewriteCond %{THE_REQUEST} \s/en/([^.\s?]+)\.html[\s?] [NC]
+RewriteRule ^ /en/%1? [R=301,L]
+
+# Internally rewrite /page to /page.html (Polish)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^.]+)$ $1.html [NC,L]
+RewriteCond %{REQUEST_URI} !^/en/
+RewriteRule ^([^.]+)$ $1.html [L]
+
+# Internally rewrite /en/page to /en/page.html (English)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^en/([^.]+)$ en/$1.html [L]
 
 # Security headers
 Header always set X-Content-Type-Options nosniff

@@ -1,0 +1,50 @@
+⎿  Plan implementacji języka angielskiego dla Watchful Eye Audits
+
+     Rekomendowany wariant: Struktura katalogowa /en/
+
+     Faza 1: Struktura i konfiguracja (2h)
+
+     1. Utworzenie katalogu /en/ z duplikatami wszystkich stron HTML
+     2. Modyfikacja .htaccess - dodanie reguł dla języków i przekierowań
+     3. Aktualizacja sitemap.xml - dodanie wszystkich stron angielskich
+     4. Konfiguracja hreflang - prawidłowe powiązania PL/EN wersji
+
+     Faza 2: Tłumaczenie treści (4-6h)
+
+     1. HTML content - tłumaczenie wszystkich tekstów na stronach
+     2. Meta tagi - titles, descriptions, keywords po angielsku
+     3. Alt teksty - opisy obrazków w języku angielskim
+     4. Structured data - JSON-LD po angielsku
+     5. Breadcrumbs i navigation - menu i nawigacja po angielsku
+
+     Faza 3: Funkcjonalność przełącznika (1h)
+
+     1. JavaScript logic - obsługa przełączania języków
+     2. URL mapping - automatyczne przekierowania PL↔EN
+     3. Cookie/localStorage - zapamiętywanie preferencji języka
+     4. Detektowanie języka - na podstawie Accept-Language header
+
+     Faza 4: SEO i optymalizacja (1h)
+
+     1. Canonical URLs - prawidłowe powiązania
+     2. Open Graph - międzynarodowe meta tagi
+     3. robots.txt - aktualizacja dla dwujęzyczności
+     4. XML sitemap - hreflang annotations
+
+     Struktura URL:
+
+     Polski (domyślny):     Angielski:
+     /                  →   /en/
+     /o-nas            →   /en/about-us
+     /oferta           →   /en/services
+     /kontakt          →   /en/contact
+     /faq              →   /en/faq
+
+     Przewagi tego rozwiązania:
+
+     - ✅ SEO-friendly structure
+     - ✅ Clean URLs zachowane
+     - ✅ Łatwe zarządzanie treścią
+     - ✅ Minimal performance impact
+     - ✅ Standard industry practice
+
